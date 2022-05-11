@@ -1287,7 +1287,11 @@ div#ventanaPOP {
 	.certificados {
 		width: auto;
 		height: 300px;
+		display: flex;
 		position: relative;
+		flex-direction: column;
+    	flex-wrap: nowrap;
+    	justify-content: flex-start;
 	}
 	.imgCursos {
 		height: 80%;
