@@ -355,6 +355,7 @@ div#ventanaPOP {
 		height: 10vh;
 		display: flex;
 		justify-content: space-evenly;
+		align-items: center;
 		z-index: 10;
 	}
 	.titulo{
@@ -580,8 +581,8 @@ div#ventanaPOP {
 	
 	}
 	@keyframes btnopacidad{
-		from{background-color: #5fffd7 ;}
-		to{background-color: #54a08d ; opacity:6;z-index: 5;}
+		from{background-color: chocolate ;}
+		to{background-color: rgb(141, 86, 47) ; opacity:6;z-index: 5;}
 	}
 
 	.imgPrimerBloque{
@@ -628,13 +629,16 @@ div#ventanaPOP {
 		align-items: center;
 		row-gap: 10px;
 	}
+	#dgit{
+		filter:invert(1);
+	}
 	.cajameMoramaReposo {
 		display: flex;
 		gap: 10px;
 	}
 	.Textoybtn {
 		width: 100%;
-		height: 50%;
+		height: 80%;
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
@@ -649,37 +653,119 @@ div#ventanaPOP {
 		border-radius:20px;
 		position:relative;
 		transform-origin: 50% 50%;
-	}
-	.imgTecnologias:hover{
 		cursor: pointer;
-		animation: tecnologiasCubos  .7s infinite linear alternate;
-		
 	}
-	.imgTecnologias:active{
-		transform:scale(.9);
+	
+	.imgTecnologias:hover{
+		animation: tecnologiasCubos  .7s infinite linear alternate;
 	}
 	@keyframes tecnologiasCubos{
 		0% { transform:  rotateY(-20deg )   ;
 			box-shadow: 5px 0px 3px 3px cyan;}
-		
 		100% { transform:  rotateY(20deg )  ;  
 			box-shadow: -5px 0px 3px 3px rgb(255, 255, 255);
 			}
-					
 	}
+
+.descripcionjuego {
+    width: 100%;
+    height: 100%;
+    display: flex;
+	position: relative;
+    flex-wrap: wrap;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloJuego {
+    width: 80%;
+    height: 20%;
+    display: flex;
+	background-color: #000;
+	border-radius: 20px 20px 0 0;
+    justify-content: center;
+    text-align: center;
+    font-size: clamp(1vw,7vw,7vw);
+    align-items: center;
+    border-bottom: solid 3px gray;
+    padding: 0 0 10px 0;
+}
+.comparadorMemorama {
+    width: 80%;
+    height: 50%;
+    background: chocolate;
+}
+.comMem{
+	width: 90%;
+	height: 100%;
+	display: flex;
+    letter-spacing: 5px;
+    border-radius: 20px 20px 0 0;
+	position: relative;
+	left:20px;
+    text-align: start;
+    font-size: clamp(1vw,2em,2em);
+    align-items: center;
+    justify-content: center;
+}
+
+.botonesJuego {
+    width: 80%;
+    height: 13%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	border-top: solid 3px gray;
+}
+.intentoYreset {
+    width: 50%;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#btnL{
+	border-radius: 0 0px 0px 20px;
+}
+#btnR{
+	border-radius: 0 0px 20px 0;
+}
+.intentosTexto {
+    width: 75%;
+    height: 100%;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: clamp(1rem, 2vw, 2rem);
+}
+.intentosNumero {
+    width: 150px;
+    height: 50px;
+    font-size: clamp(1rem, 2vw, 2rem);
+	display: flex;
+	border-radius: 20px;
+	background-color: chocolate;
+	justify-content: center;
+	align-items: center;
+}
 	
 	.imgSegundoBloque {
 		width: 100%;
-		object-fit: contain;
+		object-fit: cover;
 		border-radius:20px
 	}
 	.descripcionyBotoneSegundoBloque {
-		width: 60%;
+	    width: 60%;
+		height: 100%;
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
-		position:relative;
-		
+		position: relative;
+		flex-direction: column;
+			
 	}
 	.descripcionSegundoBloque {
 		height: auto;
@@ -689,11 +775,7 @@ div#ventanaPOP {
 		position: absolute;
 		left: 0;
 	}
-	#jugar{
-		position: absolute;
-		bottom: 0;
-	}
-	
+
 	.tercerBloque {
 		width: 90%;
 		height: 80%;
@@ -748,22 +830,24 @@ div#ventanaPOP {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
+		padding: 5px 0 ;
 		justify-content: center;
 	}
 	.btn {
 		width: 150px;
 		height: 50px;
-		background: #5fffd7;
+		background: chocolate;
 		display: flex;
 		justify-Content:center;
 		align-items: center;
 		border-radius: 20px;
+		font-size: clamp(1vw , 3vw,5vw);
 	}
 	.button{
 		width: 150px;
 		height: 50px;
 		border-style: none;
-		background: #5fffd7;
+		background: gray;
 		display: flex;
 		justify-Content:center;
 		align-items: center;
@@ -790,35 +874,54 @@ div#ventanaPOP {
 		width: 100%;
 		color:rgb(255, 255, 255);
 		background-color: #002661;
-		font-size: clamp(1rem, 2vw, 2rem);
 		height: 6vh;
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: center;
+		align-items: center;
 		z-index: 10;
 		align-self:flex-end;
-		display:flex;
-		justify-content:center;
-		align-items: center;
 		position:sticky;
 		bottom: 0;
+	}
+
+	.nombre{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		letter-spacing: 16px;
+		font-size: clamp(2vw,3vw,3vw);
 	}
 
 .opacidad{
 	opacity: 0;
 }
+.certificados {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.imgCursos {
+    width: 400px;
+    height: 80%;
+    display: flex;
+}
+.imgSegundoBloqueCursos {
+    height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+}
+.btncursos {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+}
 
 
 
@@ -1002,80 +1105,206 @@ div#ventanaPOP {
 	}
 	.tituloyDescripcionSobreMi {
 		width: 100%;
-		height: 50%;
+		height: 45%;
+		position: relative;
 	}
-	.tituloSobreMi {
-		width: 100%;
-		height: 35%;
-	}
+	
 	.descripcionSobreMi {
 		width: 100%;
-		height: 64%;
+	
+		height: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+	.tituloSobreMi {
+		width: 91%;
+		height: 20%;
+		align-self: center;
+		border-radius: 20px;
+	}
+	.textoDescripcionSobreMi {
+		height: auto;
+		font-size: clamp(2vw , 5vw , 5vw);
+		text-align: justify;
+		margin: 0 20px;
 	}
 	.imagenSobreMi {
 		width: 100%;
 		height: 50%;
 	}
 	.imgSobreMi {
-		width: 200px;
-		height: 200px;
+		width: 220px;
+		height: 220px;
 	}
 	.btn {
 		width: 100px;
-		height: 35px;
+		height: 45px;
+		font-size: clamp(1vw , 2vw,2vw);
 	}
 	.button{
 		width: 100px;
-		height: 35px;
+		height: 45px;
+		font-size: clamp(1vw , 5vw,5vw);
 	}
 
 	.segundoBloque {
 		width: 100%;
 		height: 100%;
 		display: flex;
-		flex-wrap: wrap;
+		flex-wrap: nowrap;
+		position: relative;
+		align-items: center;
 		flex-direction: column;
 	}
 	.tituloEImgSegundoBloque {
-		width: 100%;
-		height: 30%;
-		display: flex;
+		width: 90%;
+		background: aquamarine;
+		height: 50%;
 	}
 
 	.tecnologiaSegundoBloque {
-		width: 100%;
-		height: 99%;
+		width: 95%;
+		height: 90%;
 		display: flex;
-		column-gap: 5px;
-		row-gap: 5px;
+		
+		background: antiquewhite;
 		flex-wrap: wrap;
+		
 		overflow-y: scroll;
 		justify-content: space-evenly;
 		align-items: center;
 	}
+	.cajameMoramaReposo {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		height: 50%;
+		gap: 5px;
+		align-items: center;
+	}
 	.imgTecnologias{
-		width:calc(100vw / 7);
-		height:calc(100vw / 7);
+		width:calc(100vw / 5);
+		height:calc(100vw / 5);
 		display: flex;
 	}
 	
 	.imgSegundoBloque {
 		width: 100%;
-		object-fit: contain;
+		object-fit: cover;
 	}
 	.descripcionyBotoneSegundoBloque {
 		width: 100%;
-		height: 70%;
+		position: relative;
+		height: 50%;
 	}
-	.descripcionSegundoBloque {
+	.Textoybtn {
+		width: 100%;
+		height: 83%;
+		display: flex;
+		position: absolute;
+		flex-wrap: wrap;
+		top: 0;
+		flex-direction: column;
+		align-items: center;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+	.descripcionjuego {
 		width: 100%;
 		height: 100%;
 		display: flex;
+		position: absolute;
+		top: 0;
 		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.tituloJuego {
+		width: 80%;
+		height: 18%;
+		display: flex;
+		background-color: #000;
+		border-radius: 20px 20px 0 0;
+		justify-content: center;
+		text-align: center;
+		font-size: clamp(1vw,7vw,7vw);
+		align-items: center;
+		border-bottom: solid 3px gray;
+		padding: 0 0 10px 0;
+	}
+	.comparadorMemorama {
+		width: 80%;
+		height: 50%;
+		background: chocolate;
+	}
+	.comMem {
+		width: 90%;
+		height: 100%;
+		display: flex;
+		/* letter-spacing: 5px; */
+		border-radius: 20px 20px 0 0;
+		position: relative;
+		left: 20px;
+		text-align: start;
+		font-size: clamp(1vw,1em,1em);
+		align-items: center;
+		justify-content: center;
+	}
+	.botonesJuego {
+		width: 80%;
+		height: 23%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-top: solid 3px gray;
+	}
+	.intentosNumero {
+		width: 150px;
+		height: 45px;
+		font-size: clamp(1rem, 2vw, 2rem);
+		display: flex;
+		border-radius: 20px;
+		background-color: chocolate;
+		justify-content: center;
+		align-items: center;
+	}
+	.descripcionSegundoBloque {
+		width: 90%;
+		height: 100%;
+		position: relative;
+		letter-spacing: 2px;
+		display: flex;
+		flex-wrap: wrap;
+		font-size: clamp(2vw,4vw,4vw);
+		margin: 0 auto;
 		flex-direction: column;
 		justify-content: space-evenly;
 	}
-	.textoSegundoBloque {
+	.certificados {
+		width: auto;
+		height: 300px;
+		position: relative;
+	}
+	.imgCursos {
+		height: 80%;
+		display: flex;
+	}
+	.btncursos {
+		display: flex;
+		position: absolute;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		bottom: 0;
+	}
+
+
+
+	/* .textoSegundoBloque {
 		width: 100%;
 		height: 10%;
 		background: blueviolet;
@@ -1091,6 +1320,19 @@ div#ventanaPOP {
 		width: 100px;
 		height: 50px;
 		background: #d08484;
+	} */
+	.tercerBloque {
+		width: 100%;
+		height: 85%;
+	}
+	.camposTercerBloque {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
 	}
 	.inpt {
 		border: none;
@@ -1098,9 +1340,24 @@ div#ventanaPOP {
 		height: 5vh;
 	}
 	form.formulario {
-		width: 75%;
-		gap: 5px;
+		width: 90%;
 	}
+	.contactoTexto {
+		align-self: center;
+		font-size: clamp(2vw,10vw,10vw);
+	}
+	.camposText {
+		font-size: clamp(2vw,5vw,5vw);
+	}
+	.botonFormulario {
+		width: 100%;
+		height: 15%;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+	
 	.pt{
 		text-decoration: none;
 	}
