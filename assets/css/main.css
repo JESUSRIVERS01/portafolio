@@ -503,7 +503,9 @@ div#ventanaPOP {
 	}
 	.tituloSobreMi {
 		width: 40%;
-		font-size: clamp(2vw , 6vw , 6vw);
+		letter-spacing: 5px;
+		height: 16%;
+		font-size: clamp(2rem, 5vw, 5rem);
 		background: linear-gradient(90deg, #daae51 0%,  #d53369 100%);
 		border-radius: 0 20px 20px 0;
 		justify-content: center;
@@ -530,7 +532,7 @@ div#ventanaPOP {
 	}
 	.textoDescripcionSobreMi{
 		height: auto;
-		font-size: clamp(2vw , 4vw , 4vw);
+		font-size: clamp(2rem , 4vw , 3rem);
 		text-align: end;
 		margin: 0 20px 0 0;
 	}
@@ -544,8 +546,8 @@ div#ventanaPOP {
 		overflow:hidden;
 	}
 	.imgSobreMi{
-		width: 400px;
-		height:400px;
+		width: clamp(12rem,25vw,25rem);
+    height: clamp(12rem,25vw,25rem);
 		display: flex;
 		opacity: 0;
 		border-radius: 50%;
@@ -705,7 +707,7 @@ div#ventanaPOP {
 	position: relative;
 	left:20px;
     text-align: start;
-    font-size: clamp(1vw,2em,2em);
+    font-size: clamp(1rem,3vw,2em);
     align-items: center;
     justify-content: center;
 }
@@ -841,7 +843,7 @@ div#ventanaPOP {
 		justify-Content:center;
 		align-items: center;
 		border-radius: 20px;
-		font-size: clamp(1vw , 3vw,5vw);
+		font-size: clamp(1.5rem , 100vw,1.5rem);
 	}
 	.button{
 		width: 150px;
@@ -852,6 +854,7 @@ div#ventanaPOP {
 		justify-Content:center;
 		align-items: center;
 		border-radius: 20px;
+		font-size: clamp(1.5rem , 100vw,1.5rem);
 	}
 	.button:hover{
 		cursor: pointer;
@@ -1127,7 +1130,6 @@ div#ventanaPOP {
 	}
 	.textoDescripcionSobreMi {
 		height: auto;
-		font-size: clamp(2vw , 5vw , 5vw);
 		text-align: justify;
 		margin: 0 20px;
 	}
@@ -1135,19 +1137,19 @@ div#ventanaPOP {
 		width: 100%;
 		height: 50%;
 	}
-	.imgSobreMi {
+	/* .imgSobreMi {
 		width: 220px;
 		height: 220px;
-	}
+	} */
 	.btn {
 		width: 100px;
 		height: 45px;
-		font-size: clamp(1vw , 2vw,2vw);
+		font-size: clamp(1.5rem , 100vw,1.5rem);
 	}
 	.button{
 		width: 100px;
 		height: 45px;
-		font-size: clamp(1vw , 5vw,5vw);
+		font-size: clamp(1.5rem , 100vw,1.5rem);
 	}
 
 	.segundoBloque {
@@ -1161,7 +1163,6 @@ div#ventanaPOP {
 	}
 	.tituloEImgSegundoBloque {
 		width: 90%;
-		background: aquamarine;
 		height: 50%;
 	}
 
@@ -1170,7 +1171,7 @@ div#ventanaPOP {
 		height: 90%;
 		display: flex;
 		
-		background: antiquewhite;
+	
 		flex-wrap: wrap;
 		
 		overflow-y: scroll;
@@ -1250,7 +1251,6 @@ div#ventanaPOP {
 		position: relative;
 		left: 20px;
 		text-align: start;
-		font-size: clamp(1vw,1em,1em);
 		align-items: center;
 		justify-content: center;
 	}
